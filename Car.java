@@ -10,7 +10,7 @@ public class Car extends Vehicle {
     public Car() {
         super(); // call to the super class constructor
         this.numSeats = 5;
-        this.brand = Toyota;
+        this.brand = "Toyota";
     }
 
     public Car(int numWheels, double avgSpeed, String color, int numSeats, String brand) {
@@ -18,8 +18,19 @@ public class Car extends Vehicle {
     super(numWheels, avgSpeed, color);
     this.numSeats = numSeats;
     this.brand = brand;
-
     }
+
+    public String toString() {
+        return("Vehicle[numWheels: " + this.getNumWheels() + ", avgSpeed: " + this.getAvgSpeed() + ", color: " + this.getColor() + "]");
+      }
+
+      public void makeNoise() {
+        super.makeNoise();
+        System.out.println("Beep beep");
+      }
+
+   
+    
 
 
 

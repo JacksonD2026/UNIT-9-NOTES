@@ -23,5 +23,27 @@ public class Vehicle {
 
 
 
+ public String toString() {
+   return("Vehicle[numWheels: " + this.numWheels + ", avgSpeed: " + this.avgSpeed + ", color: " + this.color + "]");
+ }
+
+ public int getNumWheels() {
+   return this.numWheels;
+ }
+
+ public double getAvgSpeed() {
+   return this.avgSpeed; 
+ }
+
+public String getColor() {
+   return this.color;
+}
+
+public void makeNoise() {
+   System.out.println("Vroom vroom");
+}
+
+
+
 
 }
