@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
 
    public static void main(String []args) {
@@ -13,7 +15,30 @@ public class Main {
       System.out.println(v2);
       System.out.println(c1);
       System.out.println(c2);
+
       c2.makeNoise();
       v2.makeNoise();
-   }
+
+    
+      // instances of the top (most super) type
+      Vehicle v3 = new Vehicle();
+      Vehicle c3 = new Car(); // Yes you're CONSTRCUTING a car, but you can call it as a vehicle because it is a type of vehicle
+      Vehicle scoot = new Vehicle();
+      Vehicle moto = new Vehicle();
+      Vehicle convertible = new Convertible();
+
+        // POLYMORPHISM example:
+        ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
+        vehicleList.add(v1);
+        vehicleList.add(v2);
+        vehicleList.add(v3);
+        vehicleList.add(c1);
+        vehicleList.add(c2);
+        vehicleList.add(c3);
+        vehicleList.add(moto);
+        vehicleList.add(scoot);
+        System.out.println(vehicleList);
+        
+
+   } 
 }
